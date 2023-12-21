@@ -8,20 +8,20 @@
  * you don't want to deal with this.
  */
 
-const { TextDecoder, TextEncoder } = require('node:util');
+import { TextDecoder, TextEncoder } from 'node:util';
 
 Object.defineProperties(globalThis, {
   TextDecoder: { value: TextDecoder },
   TextEncoder: { value: TextEncoder },
 });
 
-const { ReadableStream } = require('node:stream/web');
+import { ReadableStream } from 'node:stream/web';
 Object.defineProperties(globalThis, {
   ReadableStream: { value: ReadableStream },
 });
 
-const { Blob, File } = require('node:buffer');
-const { fetch, Headers, FormData, Request, Response } = require('undici');
+import { Blob, File } from 'node:buffer';
+import { fetch, Headers, FormData, Request, Response } from 'undici';
 
 Object.defineProperties(globalThis, {
   fetch: { value: fetch, writable: true },
