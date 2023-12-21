@@ -720,18 +720,3 @@ export const beer10 = [
 ];
 
 export const beer1ByRandom = beer10[Math.floor(Math.random() * 10)];
-
-export function useShowcaseQuery() {
-  return useQuery({
-    queryKey: ['random-beer-1'],
-    queryFn: async () => {
-      const res = await fetch('https://api.punkapi.com/v2/beers/random');
-
-      if (!res.ok) {
-        throw new Error('Network response was not ok');
-      }
-
-      return res.json();
-    },
-  });
-}
