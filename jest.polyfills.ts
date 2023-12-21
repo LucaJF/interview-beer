@@ -15,10 +15,10 @@ Object.defineProperties(globalThis, {
   TextEncoder: { value: TextEncoder },
 });
 
-import { ReadableStream } from 'node:stream/web';
-if (globalThis.ReadableStream === undefined) {
-  globalThis.ReadableStream = ReadableStream;
-}
+const { ReadableStream } = require('node:stream/web');
+Object.defineProperties(globalThis, {
+  ReadableStream: { value: ReadableStream },
+});
 
 const { Blob, File } = require('node:buffer');
 const { fetch, Headers, FormData, Request, Response } = require('undici');
