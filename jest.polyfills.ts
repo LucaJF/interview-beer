@@ -15,11 +15,6 @@ Object.defineProperties(globalThis, {
   TextEncoder: { value: TextEncoder },
 });
 
-import structuredClone from '@ungap/structured-clone';
-if (!('structuredClone' in globalThis)) {
-  globalThis.structuredClone = structuredClone;
-}
-
 import { ReadableStream } from 'node:stream/web';
 if (globalThis.ReadableStream === undefined) {
   globalThis.ReadableStream = ReadableStream;
