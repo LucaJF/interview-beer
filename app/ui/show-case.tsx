@@ -82,7 +82,7 @@ export default function Showcase() {
                 <div className="flex-none">
                   <Image
                     src={beer?.image_url || image_failed_to_load}
-                    alt={'failed'}
+                    alt={'×'}
                     width={25}
                     height={98}
                   />

@@ -8,6 +8,9 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Beer',
   description: 'interview beer',
+  metadataBase: new URL(
+    'https://interview-beer-lucas-projects-140eaa24.vercel.app/',
+  ),
 };
 
 export default function RootLayout({

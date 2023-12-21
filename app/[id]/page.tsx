@@ -42,7 +42,7 @@ export default function Page({ params }: { params: { id: string } }) {
           <div className="flex-none">
             <Image
               src={beer?.image_url || image_failed_to_load}
-              alt={`${beer?.name} Image`}
+              alt={'×'}
               width={50}
               height={195}
             />
